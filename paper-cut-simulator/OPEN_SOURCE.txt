@@ -1,0 +1,17 @@
+PNU 컴퓨터그래픽스 Project 2 · 사용한 오픈소스
+
+Rabbit Ear · 로컬 0.9.41
+https://github.com/rabbit-ear/rabbit-ear
+사용 파일  rabbit-ear/src/
+라이선스  GPLv3 · rabbit-ear/license
+
+iCurve · 로컬 Rust 소스 0.2.1
+https://github.com/iShape-Rust/iCurve
+사용 기능  iShape-js WASM을 통해 곡선 경로의 교집합과 차집합 계산
+라이선스  MIT · icurve/iCurve/LICENSE
+
+iShape-js · 로컬 ishape_wasm 3.1.0
+https://github.com/iShape-Rust/iShape-js
+사용 파일  icurve/iShape-js/pkg/ishape_wasm.js
+           icurve/iShape-js/pkg/ishape_wasm_bg.wasm
+라이선스  MIT · icurve/iShape-js/LICENSE 및 pkg/LICENSE

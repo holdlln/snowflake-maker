@@ -1,0 +1,80 @@
+{
+	"name": "rabbit-ear",
+	"version": "0.9.41",
+	"description": "origami design library",
+	"exports": {
+		".": {
+			"import": "./module/index.js",
+			"require": "./rabbit-ear.js",
+			"types": "./types/index.d.ts"
+		},
+		"./*": {
+			"import": "./module/*",
+			"types": "./types/*"
+		}
+	},
+	"type": "module",
+	"types": "./types/index.d.ts",
+	"scripts": {
+		"build": "bun run clean && python3 ./scripts/bundle-shaders.py && rollup -c && bun run types && bun run docs",
+		"clean": "bun run tests/clean.js",
+		"docs": "typedoc --options typedoc.config.json",
+		"test": "mkdir -p ./tests/tmp && vitest",
+		"types": "tsc"
+	},
+	"files": [
+		"./rabbit-ear.js",
+		"./rabbit-ear.module.js",
+		"./license",
+		"./package.json",
+		"./readme.md",
+		"./module",
+		"./types"
+	],
+	"license": "GPLv3",
+	"author": {
+		"name": "Amber Kraft",
+		"email": "amber@kraft.work",
+		"url": "https://kraft.work"
+	},
+	"keywords": [
+		"origami",
+		"design",
+		"geometry",
+		"paper",
+		"fold",
+		"folding",
+		"foldability",
+		"generative",
+		"parametric",
+		"diagram",
+		"architecture",
+		"creative",
+		"art"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/rabbit-ear/rabbit-ear.git"
+	},
+	"homepage": "https://rabbitear.org",
+	"bugs": {
+		"url": "https://github.com/rabbit-ear/rabbit-ear/issues"
+	},
+	"devDependencies": {
+		"@rollup/plugin-terser": "^0.4.3",
+		"@xmldom/xmldom": "^0.8.10",
+		"earcut": "^2.2.4",
+		"eslint": "^8.47.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.28.1",
+		"prettier": "^3.3.3",
+		"rollup": "^3.28.1",
+		"rollup-plugin-cleanup": "^3.2.1",
+		"typedoc": "^0.25.13",
+		"typedoc-github-wiki-theme": "^1.1.0",
+		"typedoc-plugin-markdown": "^3.17.1",
+		"typescript": "^5.2.2",
+		"vitest": "^0.34.6"
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "name": "ishape_wasm",
+  "type": "module",
+  "collaborators": [
+    "Nail Sharipov <nailxsharipov@gmail.com>"
+  ],
+  "description": "Triangulation and Boolean Operations for 2D Polygons. Supported operations: intersection, union, difference, XOR, and self-intersections for all polygon varieties.",
+  "version": "3.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iShape-Rust/iShape-js"
+  },
+  "files": [
+    "ishape_wasm_bg.wasm",
+    "ishape_wasm.js",
+    "ishape_wasm.d.ts"
+  ],
+  "main": "ishape_wasm.js",
+  "types": "ishape_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

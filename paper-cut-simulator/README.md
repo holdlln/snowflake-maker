@@ -46,4 +46,4 @@ python3 -m http.server 18765 --bind 127.0.0.1
 
 보관한 결정은 해당 브라우저에 저장됩니다. 웹사이트와 로컬 실행의 보관함은 서로 별개입니다.
 
-오픈소스 출처는 [OPEN_SOURCE.txt](./OPEN_SOURCE.txt), 원리·검증·시연 기록은 [PROJECT_NOTES.md](./PROJECT_NOTES.md)에 있습니다. 로컬 실행·제출 시 위 세 폴더와 라이선스 파일을 함께 보관하세요.
+오픈소스 출처는 [OPEN_SOURCE.txt](../OPEN_SOURCE.txt), 원리·검증·시연 기록은 [PROJECT_NOTES.md](./PROJECT_NOTES.md)에 있습니다. 로컬 실행·제출 시 위 세 폴더와 라이선스 파일을 함께 보관하세요.

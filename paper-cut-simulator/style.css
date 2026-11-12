@@ -88,6 +88,28 @@ button:disabled { cursor: default; opacity: .45; }
 }
 .scene-link:enabled:hover { border-color: transparent; background: #375674; }
 #snow-count { display: block; color: #b9d5ee; font-size: .69rem; font-weight: 500; }
+.topbar-actions { display: flex; align-items: center; gap: .5rem; }
+.music-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  gap: .4rem;
+  min-height: 42px;
+  padding: .45rem .65rem;
+  border-color: transparent;
+  color: #edf6ff;
+  background: #2b486b;
+  font-size: .84rem;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.music-toggle:enabled:hover { border-color: transparent; background: #375674; }
+.music-toggle[aria-pressed="true"] { background: #375f80; }
+.music-toggle svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.music-waves { display: none; }
+.music-toggle:is([data-state="playing"], [data-state="loading"]) .music-waves { display: inline; }
+.music-toggle:is([data-state="playing"], [data-state="loading"]) .music-silent { display: none; }
 .shell { max-width: var(--studio-width); margin: auto; padding: 18px var(--page-gutter) 14px; }
 .workspace { display: grid; grid-template-columns: minmax(0, 1fr) var(--panel-width); gap: var(--studio-gap); align-items: start; }
 .workbench, .panel { border-radius: 16px; overflow: hidden; box-shadow: 0 7px 18px #1a365012; }
@@ -323,6 +345,8 @@ body:has(.snow-scene[open]) { overflow: hidden; }
 }
 @media (max-width: 720px) {
   :root { --studio-width: 600px; }
+  .topbar-content { flex-wrap: wrap; }
+  .topbar-actions { margin-left: auto; gap: .4rem; }
   .brand { gap: .42rem; }
   .brand-mark { width: 23px; height: 23px; }
   .project { font-size: .62rem; }

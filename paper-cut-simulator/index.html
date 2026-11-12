@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="종이를 접고 오려서 나만의 눈결정 무늬를 만드는 2D 실험실.">
   <title>눈결정 만들기 · PNU 컴퓨터그래픽스</title>
-  <link rel="stylesheet" href="./style.css?v=flake-names">
+  <link rel="stylesheet" href="./style.css?v=winter-music-1">
 </head>
 <body>
   <header class="topbar">
@@ -15,10 +15,16 @@
           <h1 id="page-title"><span aria-hidden="true">❄️</span> 눈결정 만들기 <span aria-hidden="true">❄️</span></h1>
         </div>
       </div>
+      <div class="topbar-actions">
+      <button class="music-toggle" type="button" data-toggle-music data-state="idle" aria-pressed="false" aria-label="배경음악 재생" title="배경음악 재생">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><g class="music-waves"><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></g><path class="music-silent" d="m16 9 6 6m0-6-6 6"/></svg>
+        <span data-music-label>음악 켜기</span>
+      </button>
       <button class="scene-link" data-open-snow aria-haspopup="dialog">
         <span><strong>눈 내리는 밤</strong><small id="snow-count">보관한 결정 0개</small></span>
         <span aria-hidden="true">↗</span>
       </button>
+      </div>
     </div>
   </header>
 
@@ -147,6 +153,10 @@
         <p id="snow-subtitle">내가 만든 결정이 하늘에서 내려요.</p>
       </div>
       <div class="snow-actions">
+        <button class="music-toggle" type="button" data-toggle-music data-state="idle" aria-pressed="false" aria-label="배경음악 재생" title="배경음악 재생">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><g class="music-waves"><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></g><path class="music-silent" d="m16 9 6 6m0-6-6 6"/></svg>
+        <span data-music-label>음악 켜기</span>
+      </button>
         <button id="pause-snow">일시 정지</button>
         <button id="close-snow" autofocus>작업대로 돌아가기</button>
       </div>
@@ -158,6 +168,9 @@
     </section>
   </dialog>
   <noscript>이 앱을 사용하려면 브라우저에서 JavaScript를 켜세요.</noscript>
+  <audio id="background-music" preload="none" loop playsinline data-src="./assets/christmas-instrumental.mp3"></audio>
+  <p class="sr-only" id="music-status" role="status" aria-live="polite"></p>
+  <script type="module" src="./music.js?v=winter-music-1"></script>
   <script type="module" src="./app.js?v=flake-names"></script>
 </body>
 </html>
